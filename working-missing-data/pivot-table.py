@@ -13,7 +13,7 @@ passenger_age = titanic_survival.pivot_table(index="pclass", values="age", aggfu
 print(passenger_age)
 
 
-print("/n" *5)
+print("\n" *5)
 
 
 #Make a pivot table that calculates the total fares collected ("fare") and total number of survivors ("survived") for each embarkation port ("embarked").
@@ -30,7 +30,7 @@ print(port_stats)
 
 
 
-print("/n" *5)
+print("\n" *5)
 
 #Drop all columns in titanic_survival that have missing values and assign the result to drop_na_columns.
 #Drop all rows in titanic_survival where the columns "age" or "sex" have missing values and assign the result to new_titanic_survival.
@@ -56,7 +56,7 @@ print(new_titanic_survival)
 
 
 
-print("/n" *5)
+print("\n" *5)
 
 
 #Assign the first ten rows from new_titanic_survival to first_ten_rows.
@@ -80,7 +80,7 @@ row_index_25 = new_titanic_survival.loc[25]
 
 
 
-print("/n" *5)
+print("\n" *5)
 
 #using loc (by column name) and iloc (by column index) to get rows
 
@@ -95,7 +95,7 @@ row_index_25_survived = new_titanic_survival.loc[25, "survived"]
 five_rows_three_cols = new_titanic_survival.iloc[0:5, 0:3]
 
 
-print("/n" *5)
+print("\n" *5)
 
 # new_titanic_survival has the data sorted by age
 titanic_reindexed = new_titanic_survival.reset_index(drop=True)
@@ -104,7 +104,7 @@ print(titanic_reindexed.iloc[0:5,0:3])
 
 
 
-print("/n" *5)
+print("\n" *5)
 
 # Write a function that counts the number of null elements in a Series.
 # Use the DataFrame.apply() method along with your function to run across all the columns in titanic_survival.
@@ -122,7 +122,7 @@ column_null_count = titanic_survival.apply(countNulls)
 print(column_null_count)
 
 
-print("/n" *5)
+print("\n" *5)
 
 
 # Create a function that returns the string "minor" if someone is under 18, "adult" if they are equal to or over 18, and "unknown" if their age is null.
@@ -145,10 +145,15 @@ print age_labels
 
 
 
+print("\n" *5)
 
+#Create a pivot table that calculates the mean survival chance("survived") for each age group ("age_labels") of the dataframe titanic_survival.
+#Assign the resulting Series object to age_group_survival.
 
+titanic_survival["age_labels"] = age_labels
 
+age_group_survival = titanic_survival.pivot_table(index="age_labels", values="survived", aggfunc="mean")
 
-
+print(age_group_survival)
 
 
