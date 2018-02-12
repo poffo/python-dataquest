@@ -1,0 +1,53 @@
+Only 8 students in Juvenile Justice.
+
+
+Name: SCH_STATUS_MAGNET, dtype: int64                                           
+     TOT_ENR_F  TOT_ENR_M                                                       
+JJ                                                                              
+NO      252915     266702                                                       
+YES         71        427   
+
+
+
+
+
+/home/dq/scripts$ python exploration.py                                         
+NO     992                                                                      
+YES      8                                                                      
+Name: JJ, dtype: int64                                                          
+
+        
+        
+
+NO     948                                                                      
+YES     52                                                                      
+Name: SCH_STATUS_MAGNET, dtype: int64 
+        
+        
+        
+        
+percentage for 'SCH_ENR_HI_M': 6.72130201975, total sum: 69917                  
+percentage for 'SCH_ENR_HI_F': 6.35763244667, total sum: 66134                  
+
+percentage for 'SCH_ENR_AM_M': 0.362515982042, total sum: 3771                  
+percentage for 'SCH_ENR_AM_F': 0.344923718793, total sum: 3588                  
+
+percentage for 'SCH_ENR_AS_M': 1.28702306221, total sum: 13388                  
+percentage for 'SCH_ENR_AS_F': 1.23482306798, total sum: 12845                  
+
+percentage for 'SCH_ENR_HP_M': 0.0902684983129, total sum: 939                  
+percentage for 'SCH_ENR_HP_F': 0.0942099343414, total sum: 980                  
+
+percentage for 'SCH_ENR_BL_M': 3.60429904925, total sum: 37493                  
+percentage for 'SCH_ENR_BL_F': 3.45606260154, total sum: 35951                  
+
+percentage for 'SCH_ENR_WH_M': 12.8537919499, total sum: 133709                 
+percentage for 'SCH_ENR_WH_F': 12.069253915, total sum: 125548                  
+
+percentage for 'SCH_ENR_TR_M': 0.760601020928, total sum: 7912                  
+percentage for 'SCH_ENR_TR_F': 0.763292733338, total sum: 7940                  
+
+- Findings related to enrollment:
+  - Considering that the US population gender rate is 1:1, all different race has a close relation (almost all of them is something close to 1:1).
+  - We can see a high percentage of white race enrollments.
+  - We can see a very low percentage of american indican enrollments.
